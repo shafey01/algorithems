@@ -1,9 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func merge_sort(arr []int) []int {
-
 	if len(arr) < 2 {
 		return arr
 	}
@@ -26,7 +27,6 @@ func merge(left, right []int) []int {
 			final_arr = append(final_arr, right[j])
 			j++
 		}
-
 	}
 	for ; i < len(left); i++ {
 		final_arr = append(final_arr, left[i])
@@ -46,3 +46,7 @@ func main() {
 	}
 }
 
+type user struct {
+	Email string
+	HP    []byte
+}
