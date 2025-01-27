@@ -10,18 +10,19 @@ func main() {
 		1: 1,
 		2: 1,
 	}
-	x := 1000000
+	x := 100
 
 	now := time.Now()
-	a := fibo(x)
+	// a := fibo(x)
 	fmt.Printf("Fibo takes: %v time \n", time.Now().Sub(now))
 
 	now2 := time.Now()
 	b := fibo_efficient(x, res)
 	fmt.Printf("Fibo efficent takes: %v time \n", time.Now().Sub(now2))
 
-	fmt.Println(a)
+	// fmt.Println(a)
 	fmt.Println(b)
+	fmt.Println(fo(9000000))
 }
 
 func fibo(n int) int {
@@ -41,4 +42,8 @@ func fibo_efficient(n int, res map[int]int) int {
 		res[n] = ans
 		return ans
 	}
+}
+
+func fo(x int) int {
+	return x * x
 }
