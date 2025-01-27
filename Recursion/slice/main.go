@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"slices"
 )
 
 func reverse_slice(x []int) []int {
@@ -29,9 +30,8 @@ func reverse_looop(x []int) {
 
 func main() {
 	s := []int{1, 2, 3, 4}
-	// reverse_slice(s)
-	// slices.Reverse(s)
-	reverse_looop(s)
+	reverse_slice(s)
+	slices.Reverse(s)
 	fmt.Println(s)
 	// fmt.Println(reverse_slice_in_slice(r))
 }
